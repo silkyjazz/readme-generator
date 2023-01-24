@@ -25,7 +25,7 @@ const questions = [
   {
     type: "input",
     message: "Table of Contents",
-    answer: "confirm",
+    answer: "contents",
   },
   {
     type: "input",
