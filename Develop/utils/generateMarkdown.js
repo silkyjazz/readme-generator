@@ -16,13 +16,13 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
 if (license === 'Apache'){
-  return `link`
+  return `https://opensource.org/licenses/Apache-2.0`
 }
 if (license === 'MIT'){
-  return `link`
+  return `https://opensource.org/licenses/MIT`
 }
 if (license === 'General Public License')
- return ``
+ return `https://www.gnu.org/licenses/gpl-3.0`
 }
 
 // TODO: Create a function that returns the license section of README
@@ -68,7 +68,8 @@ function generateMarkdown(data) {
     ${data.test}
 
     ## Licenses
-
+    ${renderLicenseBadge(data.license)}
+    
     ## Questions
     If you have questions, reach out on Github. Github: https://github.com/${data.github} or via email at ${data.email}
 
